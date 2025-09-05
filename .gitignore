@@ -1,0 +1,41 @@
+# Arquivos executáveis
+analisador
+*.exe
+
+# Arquivos gerados pelo flex/lex
+src/lex.yy.c
+lex.yy.c
+*.yy.c
+
+# Arquivos de objeto
+*.o
+*.obj
+
+# Arquivos de backup
+*~
+*.bak
+*.orig
+
+# Arquivos temporários
+*.tmp
+*.temp
+teste_simples.txt
+
+# Diretórios de build
+build/
+bin/
+obj/
+
+# Arquivos de debug
+*.dSYM/
+*.gdb_history
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS gerados
+.DS_Store
+Thumbs.db
