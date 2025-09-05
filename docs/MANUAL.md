@@ -4,6 +4,8 @@
 
 Este projeto implementa um analisador léxico (scanner) para uma linguagem de programação personalizada. O analisador utiliza o gerador de analisadores léxicos **Flex** para reconhecer tokens de uma linguagem que combina elementos de francês e português.
 
+**Para a especificação formal completa da linguagem**, consulte o documento [Linguagem Regular](linguagem_regular.pdf).
+
 ## Funcionalidades
 
 O analisador reconhece os seguintes elementos:

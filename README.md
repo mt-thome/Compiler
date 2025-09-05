@@ -1,8 +1,12 @@
 # Analisador Léxico - Compilador
 
-Um analisador léxico implementado em Flex/Lex para uma linguagem de programação personalizada.
+Um analisa léxico implementado em Flex/Lex para uma linguagem de programação personalizada.
+## Documentação
 
-## 🚀 Quick Start
+- **[Manual do Usuário](docs/MANUAL.md)** - Guia completo de instalação, uso e exemplos
+- **[Especificação da Linguagem Regular](docs/linguagem_regular.md)** - Definição formal da linguagem e tokens
+
+## Quick Start
 
 ```bash
 # Verificar dependências
@@ -15,7 +19,7 @@ make
 make test
 ```
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 .
@@ -33,7 +37,7 @@ make test
 └── analisador           # Executável (gerado após compilação)
 ```
 
-## 🔧 Comandos Principais
+## Comandos Principais
 
 | Comando | Descrição |
 |---------|-----------|
@@ -42,11 +46,12 @@ make test
 | `make clean` | Limpa arquivos gerados |
 | `make help` | Mostra todos os comandos |
 
-## 📖 Documentação
+## Documentação
 
-Para instruções detalhadas, consulte o [Manual do Usuário](docs/MANUAL.md).
+- **[Manual do Usuário](docs/MANUAL.md)** - Guia completo de instalação, uso e exemplos
+- **[Especificação da Linguagem Regular](docs/linguagem_regular.md)** - Definição formal da linguagem e tokens
 
-## 🛠️ Dependências
+## Dependências
 
 - `flex` - Gerador de analisadores léxicos
 - `gcc` - Compilador C
@@ -56,7 +61,7 @@ Para instruções detalhadas, consulte o [Manual do Usuário](docs/MANUAL.md).
 sudo apt-get install flex gcc
 ```
 
-## 🎯 Exemplo de Uso
+## Exemplo de Uso
 
 ```bash
 echo 'siu (x : 42) faire' > teste.txt
@@ -74,6 +79,6 @@ LINHA 1: DELIM_FECHA_PARENTESES -> ')'
 LINHA 1: KEYWORD_DO -> 'faire'
 ```
 
-## 🎓 Sobre
+## Sobre
 
 Este projeto implementa um analisador léxico para uma linguagem que combina elementos de francês e português, desenvolvido como parte de estudos em compiladores.
