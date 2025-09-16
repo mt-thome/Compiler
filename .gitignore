@@ -43,8 +43,3 @@ Thumbs.db
 # Arquivos de documentação Markdown
 *.md
 
-# Arquivos de documentação PDF
-*.pdf
-
-# Diretório de documentação completo
-docs/
