@@ -39,3 +39,6 @@ obj/
 # OS gerados
 .DS_Store
 Thumbs.db
+
+# Arquivos de documentação Markdown
+*.md
