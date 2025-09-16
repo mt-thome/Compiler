@@ -1,0 +1,170 @@
+// ========================================
+// ARQUIVO FONTE DE DEMONSTRAÇÃO
+// Analisador Léxico - Exemplo Completo
+// ========================================
+
+/* Este arquivo demonstra todas as funcionalidades
+   do analisador léxico, incluindo:
+   - Reconhecimento de tokens válidos
+   - Detecção de erros léxicos
+   - Todas as palavras-chave
+   - Operadores e delimitadores
+   - Números e strings
+*/
+
+// === SEÇÃO 1: PALAVRAS-CHAVE E ESTRUTURAS DE CONTROLE ===
+
+siu (idade V/ 18) {
+    status : "adulto";
+    permissao : verdadeiro;
+} autre {
+    sinon siu (idade V/ 16) {
+        status : "adolescente";
+        permissao : parcial;
+    } autre {
+        status : "crianca";
+        permissao : falso;
+    }
+}
+
+changer (opcao) {
+    cas 1: {
+        retour "primeira escolha";
+        casser;
+    }
+    cas 2: {
+        retour "segunda escolha";
+        casser;
+    }
+    defaut: {
+        retour "opcao padrao";
+        casser;
+    }
+}
+
+// === SEÇÃO 2: LAÇOS DE REPETIÇÃO ===
+
+mbappe (contador : 0; contador Ʌ 10; contador : contador + 1) {
+    siu (contador :: 5) {
+        continuer;
+    }
+    resultado : contador X 2;
+}
+
+dembele (condicao ney: falso) {
+    faire {
+        processamento : processamento + 1;
+        condicao : verificar(processamento);
+    }
+}
+
+// === SEÇÃO 3: OPERADORES ARITMÉTICOS ===
+
+soma : a + b;
+subtracao : c - d;
+multiplicacao : e X f;
+divisao : g / h;
+
+// === SEÇÃO 4: OPERADORES RELACIONAIS ===
+
+menor : x Ʌ y;
+maior : m V n;
+menor_igual : p V/ q;
+igualdade : r :: s;
+diferenca : t ney: u;
+
+// === SEÇÃO 5: NÚMEROS E STRINGS ===
+
+inteiro_positivo : 42;
+inteiro_zero : 0;
+inteiro_grande : 999999;
+
+decimal_pi : 3.14159;
+decimal_pequeno : 0.001;
+decimal_normal : 123.456;
+
+nome_completo : "João Silva Santos";
+mensagem : "Olá, mundo!";
+texto_vazio : "";
+caminho : "C:/pasta/arquivo.txt";
+
+// === SEÇÃO 6: IDENTIFICADORES VÁLIDOS ===
+
+variavel_simples : 10;
+camelCase : 20;
+snake_case : 30;
+MAIUSCULA : 40;
+misturado123 : 50;
+_underscore : 60;
+a1b2c3 : 70;
+
+// === SEÇÃO 7: NEGAÇÃO LÓGICA ===
+
+negacao_simples : ney condicao;
+negacao_complexa : ney (a :: b);
+
+// === SEÇÃO 8: DELIMITADORES E ESTRUTURAS ===
+
+lista : {item1, item2, item3, item4};
+funcao(parametro1, parametro2, parametro3);
+bloco {
+    instrucao1;
+    instrucao2;
+    instrucao3;
+}
+
+// === SEÇÃO 9: COMENTÁRIOS ===
+
+// Este é um comentário de linha única
+/* Este é um comentário
+   de múltiplas linhas
+   que pode se estender
+   por várias linhas */
+
+// === SEÇÃO 10: ERROS LÉXICOS INTENCIONAIS ===
+
+// Os caracteres abaixo devem gerar erros léxicos:
+erro1 : @simbolo_invalido;
+erro2 : variavel#caractere;
+erro3 : numero$com_simbolo;
+erro4 : texto & comercial;
+erro5 : percentual % erro;
+
+// Tentativa de usar V e X como início de identificador (deve falhar):
+// Variavel : 100;  // V não pode iniciar identificador
+// Xadrez : 200;    // X não pode iniciar identificador
+
+// === SEÇÃO 11: CASOS ESPECIAIS ===
+
+// String com aspas não fechadas (erro):
+// string_erro : "texto sem fechamento
+
+// Número decimal malformado:
+// numero_erro : 123.;
+// numero_erro2 : .456;
+
+// === SEÇÃO 12: PROGRAMA COMPLETO DE EXEMPLO ===
+
+programa_principal : {
+    idade : 25;
+    nome : "Maria";
+    
+    siu (idade V/ 18) {
+        mbappe (i : 0; i Ʌ 3; i : i + 1) {
+            dembele (i Ʌ 10) {
+                resultado : i X idade;
+                siu (resultado V 100) {
+                    retour resultado;
+                } autre {
+                    continuer;
+                }
+            }
+        }
+    }
+    
+    retour nome;
+};
+
+// ========================================
+// FIM DO ARQUIVO DE DEMONSTRAÇÃO
+// ========================================

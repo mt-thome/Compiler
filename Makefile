@@ -16,7 +16,7 @@ TESTS_DIR = tests
 DOCS_DIR = docs
 
 # Arquivos de teste
-TEST_FILE = $(TESTS_DIR)/teste_completo.txt
+TEST_FILE = $(TESTS_DIR)/arquivo_fonte.txt
 SIMPLE_TEST = teste_simples.txt
 
 # Regra principal (padrão)

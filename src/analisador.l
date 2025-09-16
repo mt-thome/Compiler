@@ -6,11 +6,12 @@
 %}
 
 DIGITO [0-9]
-PRIMEIRA_LETRA [a-zA-UWY-Z]
+PRIMEIRA_LETRA [a-zA-UW-Z]
 LETRA [a-zA-Z]
 ID {PRIMEIRA_LETRA}({LETRA}|{DIGITO}|_)*
 INT {DIGITO}+
 FLOAT {DIGITO}+"."{DIGITO}+
+STRING \"[^\"]*\"
 
 %%
 
@@ -24,13 +25,8 @@ FLOAT {DIGITO}+"."{DIGITO}+
 "continuer"     {printf("LINHA %d: KEYWORD_CONTINUE -> '%s'\n", line_count, yytext); }
 "retour"        {printf("LINHA %d: KEYWORD_RETURN -> '%s'\n", line_count, yytext); }
 "faire"         {printf("LINHA %d: KEYWORD_DO -> '%s'\n", line_count, yytext); }
-"while"         {printf("LINHA %d: KEYWORD_WHILE -> '%s'\n", line_count, yytext); }
-"for"           {printf("LINHA %d: KEYWORD_FOR -> '%s'\n", line_count, yytext); }
-
-{ID}    {printf("LINHA %d: IDENTIFICADOR -> '%s'\n", line_count, yytext); }
-
-{FLOAT} {printf("LINHA %d: NUMERO_FLOAT -> %s\n", line_count, yytext); }
-{INT}   {printf("LINHA %d: NUMERO_INT -> %s\n", line_count, yytext); }
+"dembele"       {printf("LINHA %d: KEYWORD_WHILE -> '%s'\n", line_count, yytext); }
+"mbappe"        {printf("LINHA %d: KEYWORD_FOR -> '%s'\n", line_count, yytext); }
 
 "+"     {printf("LINHA %d: OP_SOMA -> '%s'\n", line_count, yytext); }
 "-"     {printf("LINHA %d: OP_SUB -> '%s'\n", line_count, yytext); }
@@ -44,6 +40,12 @@ FLOAT {DIGITO}+"."{DIGITO}+
 "ney:"  {printf("LINHA %d: OP_DIFERENTE -> '%s'\n", line_count, yytext); }
 "ney"   {printf("LINHA %d: NEGAÇÂO -> '%s'\n", line_count, yytext); }
 
+{ID}    {printf("LINHA %d: IDENTIFICADOR -> '%s'\n", line_count, yytext); }
+
+{STRING} {printf("LINHA %d: STRING -> %s\n", line_count, yytext); }
+{FLOAT} {printf("LINHA %d: NUMERO_FLOAT -> %s\n", line_count, yytext); }
+{INT}   {printf("LINHA %d: NUMERO_INT -> %s\n", line_count, yytext); }
+
 ";"             { printf("LINHA %d: DELIM_PONTO_VIRGULA -> '%s'\n", line_count, yytext); }
 ","             { printf("LINHA %d: DELIM_VIRGULA -> '%s'\n", line_count, yytext); }
 "("             { printf("LINHA %d: DELIM_ABRE_PARENTESES -> '%s'\n", line_count, yytext); }
@@ -52,7 +54,7 @@ FLOAT {DIGITO}+"."{DIGITO}+
 "}"             { printf("LINHA %d: DELIM_FECHA_CHAVES -> '%s'\n", line_count, yytext); }
 
 "//".* { /* Ignora comentário de linha única */ }
-"/*"([^*]|\*+[^*/])*\*+"*/" { /* Ignora comentário de múltiplas linhas */ }
+"/*"([^*]|"*"[^/])*"*/" { /* Ignora comentário de múltiplas linhas */ }
 
 [ \t\r]+        { /* Ignora espaços, tabs e carriage return */ }
 \n              { line_count++; /* Incrementa o contador de linha */ }
