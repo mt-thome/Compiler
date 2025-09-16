@@ -41,5 +41,5 @@ obj/
 Thumbs.db
 
 # Arquivos de documentação Markdown
-*.md
+docs/*.md
 
